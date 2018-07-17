@@ -1,16 +1,15 @@
 //
-//  ARootObj.h
+//  ABaseObj.h
 //  Pods
 //
 //  Created by sundanlong on 2018/7/17.
 //
 
 #import <Foundation/Foundation.h>
-#import <ABaseLib/ABaseObj.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface ARootObj : ABaseObj
+@interface ABaseObj : NSObject
 
 - (void)printContent;
 

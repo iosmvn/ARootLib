@@ -58,15 +58,15 @@
 		6003F5B9195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
-		6D2EF600DCFA04ABF5F4A503 /* ARootLib.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = ARootLib.podspec; path = ../ARootLib.podspec; sourceTree = "<group>"; };
+		6D2EF600DCFA04ABF5F4A503 /* ARootLib.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = ARootLib.podspec; path = ../ARootLib.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		6EBE6AFDD1C307A985888EBE /* Pods-ARootLib_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARootLib_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-ARootLib_Example/Pods-ARootLib_Example.release.xcconfig"; sourceTree = "<group>"; };
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		ACB0BE631FABB84EC50D4120 /* Pods-ARootLib_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARootLib_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ARootLib_Example/Pods-ARootLib_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		B18EAFF96587B1691069FA8F /* Pods-ARootLib_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARootLib_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ARootLib_Tests/Pods-ARootLib_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		B916A246089CD63696E07165 /* Pods-ARootLib_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARootLib_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ARootLib_Tests/Pods-ARootLib_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		DB82DB5046AB8E31A1954B7D /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		F51371A0F51FC1CDFA5D1416 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		DB82DB5046AB8E31A1954B7D /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		F51371A0F51FC1CDFA5D1416 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -208,6 +208,7 @@
 				6003F587195388D20070C39A /* Frameworks */,
 				6003F588195388D20070C39A /* Resources */,
 				F5E9FC1A86628A61BC2EDD9F /* [CP] Embed Pods Frameworks */,
+				42B1BD0F4ADD791DAA022DCA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -319,6 +320,24 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ARootLib_Tests/Pods-ARootLib_Tests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		42B1BD0F4ADD791DAA022DCA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ARootLib_Example/Pods-ARootLib_Example-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/ABaseLib/ABaseLib.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ABaseLib.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ARootLib_Example/Pods-ARootLib_Example-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		8444FE59716F0C969000BEC3 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -362,11 +381,15 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-ARootLib_Example/Pods-ARootLib_Example-frameworks.sh",
+				"${PODS_ROOT}/ABaseLib/Carthage/Build/iOS/ABaseLib.framework",
+				"${PODS_ROOT}/ABaseLib/Carthage/Build/iOS/ABaseLib.framework.dSYM",
 				"${BUILT_PRODUCTS_DIR}/ARootLib/ARootLib.framework",
 				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ABaseLib.framework",
+				"${DWARF_DSYM_FOLDER_PATH}/ABaseLib.framework.dSYM",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ARootLib.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
 			);

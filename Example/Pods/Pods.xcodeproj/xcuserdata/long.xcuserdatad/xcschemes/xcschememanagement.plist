@@ -4,10 +4,20 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>ARootLib.xcscheme_^#shared#^_</key>
+		<key>ABaseLib-ABaseLib.xcscheme</key>
 		<dict>
 			<key>isShown</key>
-			<true/>
+			<false/>
+		</dict>
+		<key>ARootLib-ARootLib.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>ARootLib.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>Expecta+Snapshots.xcscheme</key>
 		<dict>

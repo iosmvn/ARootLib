@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ARootLib'
-  s.version          = '0.0.1'
+  s.version          = '0.0.3'
   s.summary          = 'ARootLib.2018'
 
 # This description is used to generate tags and improve search results.
@@ -48,4 +48,5 @@ Pod::Spec.new do |s|
   # s.dependency 'AFNetworking', '~> 2.3'
 
   s.dependency 'Masonry', '~> 1.1.0'
+  s.dependency 'ABaseLib', '~> 0.0.3'
 end
