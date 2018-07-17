@@ -1,0 +1,6 @@
+framework module ARootLib {
+  umbrella header "ARootLib-umbrella.h"
+
+  export *
+  module * { export * }
+}
