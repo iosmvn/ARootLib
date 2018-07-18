@@ -6,10 +6,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <ABaseLib/ABaseObj.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface ARootObj : NSObject
+@interface ARootObj : ABaseObj
 
 - (void)printContent;
 
